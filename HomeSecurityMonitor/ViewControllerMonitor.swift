@@ -10,10 +10,16 @@ import UIKit
 
 class ViewControllerMonitor: UIViewController {
 
+    
+    @IBOutlet weak var barMenu: UIStackView!
+    @IBOutlet weak var monitorButton: UIButton!
+    @IBOutlet weak var alarmButton: UIButton!
+    @IBOutlet weak var chatButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.navigationController?.isNavigationBarHidden = true
+       monitorButton.isEnabled=false
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,7 +28,7 @@ class ViewControllerMonitor: UIViewController {
     }
     
 
-    /*
+        /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

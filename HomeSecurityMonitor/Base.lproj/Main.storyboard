@@ -6,54 +6,213 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--View Controller Monitor-->
+        <scene sceneID="2dS-9J-K7w">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HomeSecurityMonitor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Mj9-hA-CtO" customClass="ViewControllerMonitor" customModule="HomeSecurityMonitor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="ADV-T5-To5"/>
+                        <viewControllerLayoutGuide type="bottom" id="kRU-GM-rdJ"/>
                     </layoutGuides>
-                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="Xqp-Bv-YmF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Rgp-qe-ReQ">
-                                <frame key="frameInset" minX="81" minY="72" width="159" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wYj-a2-AiJ">
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pe-5u-Tf4">
-                                        <frame key="frameInset" width="53" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8am-OX-gxQ">
                                         <state key="normal" title="Monitor"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Kz-qR-HtW">
-                                        <frame key="frameInset" minX="53" width="53" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="we8-Nq-8nd">
+                                        <state key="normal" title="Chat"/>
+                                        <connections>
+                                            <segue destination="26H-GN-9jh" kind="show" animates="NO" id="iKs-Ww-oq6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DI8-pG-Je1">
+                                        <state key="normal" title="Alarm"/>
+                                        <connections>
+                                            <segue destination="67Y-gZ-R6k" kind="show" animates="NO" id="EDi-yM-v58"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MONITOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0N4-gW-lJj">
+                                <frame key="frameInset" minX="166" minY="323" width="42" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="wYj-a2-AiJ" firstAttribute="width" secondItem="Xqp-Bv-YmF" secondAttribute="width" id="7iF-eH-MIX"/>
+                            <constraint firstItem="0N4-gW-lJj" firstAttribute="centerX" secondItem="Xqp-Bv-YmF" secondAttribute="centerX" id="Cad-0j-dwu"/>
+                            <constraint firstItem="0N4-gW-lJj" firstAttribute="centerY" secondItem="Xqp-Bv-YmF" secondAttribute="centerY" id="Lbk-MQ-GvA"/>
+                            <constraint firstItem="wYj-a2-AiJ" firstAttribute="centerX" secondItem="Xqp-Bv-YmF" secondAttribute="centerX" id="NaE-72-tia"/>
+                            <constraint firstItem="wYj-a2-AiJ" firstAttribute="top" secondItem="ADV-T5-To5" secondAttribute="bottom" constant="8" id="huo-Xl-a1c"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="UTL-dr-uGk" appends="YES" id="GZy-sQ-eN2"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="e9j-Bv-CMT"/>
+                    <connections>
+                        <outlet property="alarmButton" destination="DI8-pG-Je1" id="WkF-2P-sgV"/>
+                        <outlet property="barMenu" destination="wYj-a2-AiJ" id="38Y-JQ-YmZ"/>
+                        <outlet property="chatButton" destination="we8-Nq-8nd" id="J7S-gI-qAt"/>
+                        <outlet property="monitorButton" destination="8am-OX-gxQ" id="iRd-Cp-od7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lze-y1-Z5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="UTL-dr-uGk">
+                    <connections>
+                        <segue destination="26H-GN-9jh" kind="show" animates="NO" id="NwD-X9-Gx6"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="429.60000000000002" y="-555.47226386806597"/>
+        </scene>
+        <!--View Controller Chat-->
+        <scene sceneID="v8m-tv-yl2">
+            <objects>
+                <viewController id="26H-GN-9jh" customClass="ViewControllerChat" customModule="HomeSecurityMonitor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E26-sJ-IcS"/>
+                        <viewControllerLayoutGuide type="bottom" id="H2V-yP-bXn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LX4-SH-Hx8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="a5t-RP-Xp8">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5e-bs-Nid">
+                                        <state key="normal" title="Monitor"/>
+                                        <connections>
+                                            <segue destination="Mj9-hA-CtO" kind="show" animates="NO" id="mVJ-fp-5BK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9D-zY-UhD">
                                         <state key="normal" title="Chat"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FP7-bh-oZt">
-                                        <frame key="frameInset" minX="106" width="53" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qf-dN-knl">
+                                        <state key="normal" title="Alarm"/>
+                                        <connections>
+                                            <segue destination="67Y-gZ-R6k" kind="show" animates="NO" id="kYu-Fd-n6A"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CHAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mG-XG-pfP">
+                                <frame key="frameInset" minX="166" minY="323" width="42" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="a5t-RP-Xp8" firstAttribute="width" secondItem="LX4-SH-Hx8" secondAttribute="width" id="4pC-Dr-WIF"/>
+                            <constraint firstItem="a5t-RP-Xp8" firstAttribute="centerX" secondItem="LX4-SH-Hx8" secondAttribute="centerX" id="DgQ-Yt-OJf"/>
+                            <constraint firstItem="8mG-XG-pfP" firstAttribute="centerX" secondItem="LX4-SH-Hx8" secondAttribute="centerX" id="SnA-tT-rU6"/>
+                            <constraint firstItem="8mG-XG-pfP" firstAttribute="centerY" secondItem="LX4-SH-Hx8" secondAttribute="centerY" id="Zid-gC-Edh"/>
+                            <constraint firstItem="a5t-RP-Xp8" firstAttribute="top" secondItem="E26-sJ-IcS" secondAttribute="bottom" constant="8" id="vHU-Kg-iXK"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Yy1-xa-zu8" appends="YES" id="RiF-m6-C6M"/>
+                            <outletCollection property="gestureRecognizers" destination="j4J-6X-4ld" appends="YES" id="vft-Ie-Mph"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="alarmButton" destination="1Qf-dN-knl" id="FFx-3H-HWc"/>
+                        <outlet property="barMenu" destination="a5t-RP-Xp8" id="TRJ-mk-GvA"/>
+                        <outlet property="chatButton" destination="y9D-zY-UhD" id="7SB-lS-h01"/>
+                        <outlet property="monitorButton" destination="d5e-bs-Nid" id="n2g-AJ-X3B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZeV-5b-YNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer cancelsTouchesInView="NO" direction="right" id="Yy1-xa-zu8">
+                    <connections>
+                        <segue destination="Mj9-hA-CtO" kind="show" animates="NO" id="TyR-dm-JPQ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer cancelsTouchesInView="NO" direction="left" id="j4J-6X-4ld" userLabel="LeftSwipe">
+                    <connections>
+                        <segue destination="67Y-gZ-R6k" kind="show" animates="NO" id="22S-bg-owR"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1189.5999999999999" y="-543.77811094452773"/>
+        </scene>
+        <!--View Controller Alarm-->
+        <scene sceneID="gEC-IV-n5z">
+            <objects>
+                <viewController id="67Y-gZ-R6k" customClass="ViewControllerAlarm" customModule="HomeSecurityMonitor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xdh-mT-TZC"/>
+                        <viewControllerLayoutGuide type="bottom" id="LdG-LS-qPo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rF1-ko-Oas">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xuc-z1-Oyu">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2S-Ya-ZyX">
+                                        <state key="normal" title="Monitor"/>
+                                        <connections>
+                                            <segue destination="Mj9-hA-CtO" kind="show" animates="NO" id="d5v-2c-KCa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrx-Zi-GHQ">
+                                        <state key="normal" title="Chat"/>
+                                        <connections>
+                                            <segue destination="26H-GN-9jh" kind="show" animates="NO" id="UYz-Ct-DyV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSc-yu-YAd">
                                         <state key="normal" title="Alarm"/>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dO-H1-uVz">
-                                <frame key="frameInset" minY="118" width="375" height="549"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ALARM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2N-mG-fh3">
+                                <frame key="frameInset" minX="166" minY="323" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="u2N-mG-fh3" firstAttribute="centerX" secondItem="rF1-ko-Oas" secondAttribute="centerX" id="IPt-hH-pj5"/>
+                            <constraint firstItem="xuc-z1-Oyu" firstAttribute="width" secondItem="rF1-ko-Oas" secondAttribute="width" id="eTn-wT-MXy"/>
+                            <constraint firstItem="xuc-z1-Oyu" firstAttribute="centerX" secondItem="rF1-ko-Oas" secondAttribute="centerX" id="fxE-px-veK"/>
+                            <constraint firstItem="xuc-z1-Oyu" firstAttribute="top" secondItem="Xdh-mT-TZC" secondAttribute="bottom" constant="9" id="kzG-Fo-J8J"/>
+                            <constraint firstItem="u2N-mG-fh3" firstAttribute="centerY" secondItem="rF1-ko-Oas" secondAttribute="centerY" id="srQ-Cp-ASR"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="fMx-1K-cNf" appends="YES" id="6NG-Xy-nhe"/>
+                        </connections>
                     </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="TyW-wk-Xws"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="barMenu" destination="Rgp-qe-ReQ" id="b1U-4B-pvj"/>
-                        <outlet property="scrollView" destination="2dO-H1-uVz" id="eBB-Qt-zgU"/>
+                        <outlet property="alarmButton" destination="KSc-yu-YAd" id="Xcf-fg-0WW"/>
+                        <outlet property="barMenu" destination="xuc-z1-Oyu" id="lhl-pR-42L"/>
+                        <outlet property="chatButton" destination="wrx-Zi-GHQ" id="1Rr-PX-tPi"/>
+                        <outlet property="monitorButton" destination="O2S-Ya-ZyX" id="JUa-Io-i1a"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iif-BY-DRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="fMx-1K-cNf">
+                    <connections>
+                        <segue destination="26H-GN-9jh" kind="show" animates="NO" action="showDetailViewController:sender:" id="oof-YB-a6p"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1973.5999999999999" y="-338.68065967016497"/>
+            <point key="canvasLocation" x="2052" y="-555"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K6F-4O-zHO">
@@ -66,12 +225,17 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9a9-db-C6c"/>
+                        <segue destination="Mj9-hA-CtO" kind="relationship" relationship="rootViewController" id="Gk5-Dv-dfN"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DAV-x1-FFx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114.375" y="786.97183098591552"/>
+            <point key="canvasLocation" x="-273" y="-555"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="oof-YB-a6p"/>
+        <segue reference="kYu-Fd-n6A"/>
+        <segue reference="mVJ-fp-5BK"/>
+    </inferredMetricsTieBreakers>
 </document>

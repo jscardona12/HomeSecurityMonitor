@@ -9,11 +9,16 @@
 import UIKit
 
 class ViewControllerChat: UIViewController {
-
+    @IBOutlet weak var barMenu: UIStackView!
+    
+    @IBOutlet weak var monitorButton: UIButton!
+    @IBOutlet weak var alarmButton: UIButton!
+    @IBOutlet weak var chatButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        chatButton.isEnabled = false
     }
 
     override func didReceiveMemoryWarning() {
