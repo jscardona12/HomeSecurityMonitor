@@ -14,6 +14,12 @@
 		DE67795B1DC5123A003AF547 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6779591DC5123A003AF547 /* LaunchScreen.storyboard */; };
 		DE6779661DC5123B003AF547 /* HomeSecurityMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6779651DC5123B003AF547 /* HomeSecurityMonitorTests.swift */; };
 		DE6779711DC5123B003AF547 /* HomeSecurityMonitorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6779701DC5123B003AF547 /* HomeSecurityMonitorUITests.swift */; };
+		DE6779821DC51CA5003AF547 /* ViewControllerMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6779801DC51CA5003AF547 /* ViewControllerMonitor.swift */; };
+		DE6779831DC51CA5003AF547 /* ViewControllerMonitor.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE6779811DC51CA5003AF547 /* ViewControllerMonitor.xib */; };
+		DE67798E1DC51D46003AF547 /* ViewControllerAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67798C1DC51D46003AF547 /* ViewControllerAlarm.swift */; };
+		DE67798F1DC51D46003AF547 /* ViewControllerAlarm.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE67798D1DC51D46003AF547 /* ViewControllerAlarm.xib */; };
+		DE6779941DC51DCE003AF547 /* ViewControllerChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6779921DC51DCE003AF547 /* ViewControllerChat.swift */; };
+		DE6779951DC51DCE003AF547 /* ViewControllerChat.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE6779931DC51DCE003AF547 /* ViewControllerChat.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		DE67796C1DC5123B003AF547 /* HomeSecurityMonitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeSecurityMonitorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE6779701DC5123B003AF547 /* HomeSecurityMonitorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSecurityMonitorUITests.swift; sourceTree = "<group>"; };
 		DE6779721DC5123B003AF547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE6779801DC51CA5003AF547 /* ViewControllerMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMonitor.swift; sourceTree = "<group>"; };
+		DE6779811DC51CA5003AF547 /* ViewControllerMonitor.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewControllerMonitor.xib; sourceTree = "<group>"; };
+		DE67798C1DC51D46003AF547 /* ViewControllerAlarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAlarm.swift; sourceTree = "<group>"; };
+		DE67798D1DC51D46003AF547 /* ViewControllerAlarm.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewControllerAlarm.xib; sourceTree = "<group>"; };
+		DE6779921DC51DCE003AF547 /* ViewControllerChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerChat.swift; path = ../ViewControllerChat.swift; sourceTree = "<group>"; };
+		DE6779931DC51DCE003AF547 /* ViewControllerChat.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewControllerChat.xib; path = ../ViewControllerChat.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,12 @@
 			children = (
 				DE6779501DC5123A003AF547 /* AppDelegate.swift */,
 				DE6779521DC5123A003AF547 /* ViewController.swift */,
+				DE6779801DC51CA5003AF547 /* ViewControllerMonitor.swift */,
+				DE6779811DC51CA5003AF547 /* ViewControllerMonitor.xib */,
+				DE6779921DC51DCE003AF547 /* ViewControllerChat.swift */,
+				DE6779931DC51DCE003AF547 /* ViewControllerChat.xib */,
+				DE67798C1DC51D46003AF547 /* ViewControllerAlarm.swift */,
+				DE67798D1DC51D46003AF547 /* ViewControllerAlarm.xib */,
 				DE6779541DC5123A003AF547 /* Main.storyboard */,
 				DE6779571DC5123A003AF547 /* Assets.xcassets */,
 				DE6779591DC5123A003AF547 /* LaunchScreen.storyboard */,
@@ -233,6 +251,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE67795B1DC5123A003AF547 /* LaunchScreen.storyboard in Resources */,
+				DE6779831DC51CA5003AF547 /* ViewControllerMonitor.xib in Resources */,
+				DE6779951DC51DCE003AF547 /* ViewControllerChat.xib in Resources */,
+				DE67798F1DC51D46003AF547 /* ViewControllerAlarm.xib in Resources */,
 				DE6779581DC5123A003AF547 /* Assets.xcassets in Resources */,
 				DE6779561DC5123A003AF547 /* Main.storyboard in Resources */,
 			);
@@ -260,6 +281,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE6779531DC5123A003AF547 /* ViewController.swift in Sources */,
+				DE6779941DC51DCE003AF547 /* ViewControllerChat.swift in Sources */,
+				DE6779821DC51CA5003AF547 /* ViewControllerMonitor.swift in Sources */,
+				DE67798E1DC51D46003AF547 /* ViewControllerAlarm.swift in Sources */,
 				DE6779511DC5123A003AF547 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
