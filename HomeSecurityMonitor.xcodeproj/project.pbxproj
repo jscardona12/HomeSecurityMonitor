@@ -16,6 +16,7 @@
 		DE6779821DC51CA5003AF547 /* ViewControllerMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6779801DC51CA5003AF547 /* ViewControllerMonitor.swift */; };
 		DE67798E1DC51D46003AF547 /* ViewControllerAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67798C1DC51D46003AF547 /* ViewControllerAlarm.swift */; };
 		DE6779941DC51DCE003AF547 /* ViewControllerChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6779921DC51DCE003AF547 /* ViewControllerChat.swift */; };
+		E3D595EB1DC56B97006E238D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D595EA1DC56B97006E238D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		DE6779801DC51CA5003AF547 /* ViewControllerMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMonitor.swift; sourceTree = "<group>"; };
 		DE67798C1DC51D46003AF547 /* ViewControllerAlarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAlarm.swift; sourceTree = "<group>"; };
 		DE6779921DC51DCE003AF547 /* ViewControllerChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerChat.swift; path = ../ViewControllerChat.swift; sourceTree = "<group>"; };
+		E3D595EA1DC56B97006E238D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				DE6779921DC51DCE003AF547 /* ViewControllerChat.swift */,
 				DE67798C1DC51D46003AF547 /* ViewControllerAlarm.swift */,
 				DE6779541DC5123A003AF547 /* Main.storyboard */,
+				E3D595EA1DC56B97006E238D /* LaunchScreen.storyboard */,
 				DE6779571DC5123A003AF547 /* Assets.xcassets */,
 				DE67795C1DC5123A003AF547 /* Info.plist */,
 			);
@@ -239,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3D595EB1DC56B97006E238D /* LaunchScreen.storyboard in Resources */,
 				DE6779581DC5123A003AF547 /* Assets.xcassets in Resources */,
 				DE6779561DC5123A003AF547 /* Main.storyboard in Resources */,
 			);
