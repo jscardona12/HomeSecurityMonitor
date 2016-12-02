@@ -37,8 +37,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MONITOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0N4-gW-lJj">
-                                <frame key="frameInset" minX="166" minY="323" width="42" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MONITOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0N4-gW-lJj">
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -105,8 +104,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CHAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mG-XG-pfP">
-                                <frame key="frameInset" minX="166" minY="323" width="42" height="39"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mG-XG-pfP">
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -178,21 +176,28 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ALARM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2N-mG-fh3">
-                                <frame key="frameInset" minX="166" minY="323" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALARM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2N-mG-fh3">
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DbY-5v-63B">
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <segue destination="VKD-mw-mrw" kind="show" id="KY8-ZI-J3f"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="u2N-mG-fh3" firstAttribute="centerX" secondItem="rF1-ko-Oas" secondAttribute="centerX" id="IPt-hH-pj5"/>
+                            <constraint firstItem="DbY-5v-63B" firstAttribute="top" secondItem="Xdh-mT-TZC" secondAttribute="bottom" constant="491" id="Llf-69-a2U"/>
                             <constraint firstItem="xuc-z1-Oyu" firstAttribute="width" secondItem="rF1-ko-Oas" secondAttribute="width" id="eTn-wT-MXy"/>
                             <constraint firstItem="xuc-z1-Oyu" firstAttribute="centerX" secondItem="rF1-ko-Oas" secondAttribute="centerX" id="fxE-px-veK"/>
                             <constraint firstItem="xuc-z1-Oyu" firstAttribute="top" secondItem="Xdh-mT-TZC" secondAttribute="bottom" constant="9" id="kzG-Fo-J8J"/>
                             <constraint firstItem="u2N-mG-fh3" firstAttribute="centerY" secondItem="rF1-ko-Oas" secondAttribute="centerY" id="srQ-Cp-ASR"/>
+                            <constraint firstItem="DbY-5v-63B" firstAttribute="centerX" secondItem="rF1-ko-Oas" secondAttribute="centerX" id="vsm-1W-dtV"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="fMx-1K-cNf" appends="YES" id="6NG-Xy-nhe"/>
@@ -203,6 +208,7 @@
                         <outlet property="barMenu" destination="xuc-z1-Oyu" id="lhl-pR-42L"/>
                         <outlet property="chatButton" destination="wrx-Zi-GHQ" id="1Rr-PX-tPi"/>
                         <outlet property="monitorButton" destination="O2S-Ya-ZyX" id="JUa-Io-i1a"/>
+                        <outlet property="registerButton" destination="DbY-5v-63B" id="EC9-5R-Kw1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iif-BY-DRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -213,6 +219,44 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2052" y="-555"/>
+        </scene>
+        <!--View Controller Camera-->
+        <scene sceneID="XY5-Ty-kRn">
+            <objects>
+                <viewController id="VKD-mw-mrw" customClass="ViewControllerCamera" customModule="HomeSecurityMonitor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5ka-UR-Ra4"/>
+                        <viewControllerLayoutGuide type="bottom" id="3RA-6e-rvk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nCA-Ys-Psz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4l-CY-vvC" customClass="RenderView" customModule="GPUImage">
+                                <frame key="frameInset" minX="16" minY="75" width="343" height="538"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B5m-S7-u77">
+                                        <frame key="frameInset" minX="81" minY="459" width="51" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="didSwitch:" destination="VKD-mw-mrw" eventType="valueChanged" id="CAB-o9-aBS"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="faceDetectSwitch" destination="B5m-S7-u77" id="d4q-Xq-aRU"/>
+                        <outlet property="renderView" destination="J4l-CY-vvC" id="9sd-uy-sMv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CK0-zr-66o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2903.1999999999998" y="-555.47226386806597"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K6F-4O-zHO">
@@ -234,8 +278,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oof-YB-a6p"/>
+        <segue reference="d5v-2c-KCa"/>
         <segue reference="kYu-Fd-n6A"/>
-        <segue reference="mVJ-fp-5BK"/>
+        <segue reference="oof-YB-a6p"/>
     </inferredMetricsTieBreakers>
 </document>

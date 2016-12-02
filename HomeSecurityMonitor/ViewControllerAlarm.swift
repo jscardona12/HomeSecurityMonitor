@@ -16,6 +16,7 @@ class ViewControllerAlarm: UIViewController {
     @IBOutlet weak var alarmButton: UIButton!
     @IBOutlet weak var chatButton: UIButton!
 
+    @IBOutlet weak var registerButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
