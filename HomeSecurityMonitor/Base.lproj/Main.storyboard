@@ -232,12 +232,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4l-CY-vvC" customClass="RenderView" customModule="GPUImage">
-                                <frame key="frameInset" minX="16" minY="75" width="343" height="538"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4l-CY-vvC" customClass="RenderView" customModule="GPUImage">
+                                <frame key="frameInset" minX="16" width="343" height="659"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B5m-S7-u77">
-                                        <frame key="frameInset" minX="81" minY="459" width="51" height="31"/>
+                                        <frame key="frameInset" minX="47" minY="594" width="51" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <action selector="didSwitch:" destination="VKD-mw-mrw" eventType="valueChanged" id="CAB-o9-aBS"/>
@@ -248,6 +247,10 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J4l-CY-vvC" firstAttribute="width" secondItem="nCA-Ys-Psz" secondAttribute="width" id="5cj-lF-LW7"/>
+                            <constraint firstItem="J4l-CY-vvC" firstAttribute="height" secondItem="nCA-Ys-Psz" secondAttribute="height" id="x9b-97-cRZ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="faceDetectSwitch" destination="B5m-S7-u77" id="d4q-Xq-aRU"/>
@@ -263,7 +266,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PUt-8L-X79" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ewZ-wk-0Rh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ewZ-wk-0Rh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

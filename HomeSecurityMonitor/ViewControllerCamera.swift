@@ -38,6 +38,16 @@ class ViewControllerCamera: UIViewController {
             lineGenerator --> blendFilter
             shouldDetectFaces = faceDetectSwitch.isOn
             camera.startCapture()
+            
+                       // [(GPUImageMotionDetector *) filter setMotionDetectionBlock:^(CGPoint motionCentroid, CGFloat 0.5, CMTime frameTime) {
+          //                      CGFloat motionBoxWidth = 1500.0 * 0.5;
+            //    CGSize viewBounds = weakSelf.view.bounds.size;
+              //  dispatch_async(dispatch_get_main_queue(), ^{
+                //weakSelf->faceView.frame = CGRectMake(round(viewBounds.width * motionCentroid.x - motionBoxWidth / 2.0), round(viewBounds.height * motionCentroid.y - motionBoxWidth / 2.0), motionBoxWidth, motionBoxWidth);
+             //   weakSelf->faceView.hidden = NO;
+               // });
+                
+
         } catch {
             fatalError("Could not initialize rendering pipeline: \(error)")
         }
